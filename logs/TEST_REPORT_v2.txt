@@ -1,0 +1,9 @@
+=== v2 ENVIRONMENT ===
+OS: Ubuntu 24.04.5 LTS; Python: 3.12.3 (/usr/bin/python3)
+ROS_DISTRO: jazzy (ros-jazzy-ros-base 0.11.0, rclpy 7.1.12)
+RMW: rmw_fastrtps_cpp (default); ROS_DOMAIN_ID=81
+
+=== RESULTS ===
+1) test_ros_shutdown.py -> exit 0, ROS_SHUTDOWN_PASS (STALE observed, SIGTERM exit 0, no traceback)
+2) ethosguard_ros2_mre.py --self-test -> exit 0, PASS
+3) test_ros_transport.py -> exit 1, TimeoutError (unchanged UDP sandbox blocker)
