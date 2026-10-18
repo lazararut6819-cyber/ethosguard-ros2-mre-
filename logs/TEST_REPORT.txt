@@ -1,0 +1,15 @@
+=== ENVIRONMENT ===
+OS: Ubuntu 24.04.5 LTS
+Python: 3.12.3 (/usr/bin/python3)
+ROS_DISTRO: jazzy (ros-jazzy-ros-base 0.11.0, rclpy 7.1.12)
+RMW default: rmw_fastrtps_cpp 8.4.4 (also tried rmw_cyclonedds_cpp 2.2.4)
+ROS_DOMAIN_ID: 81
+
+=== COMMANDS (per MUSE_INSTRUCTIONS.md) ===
+1) ethosguard_ros2_mre.py --self-test -> exit 0
+2) test_ros_transport.py -> exit 1 (TimeoutError: ROS transport expectation timed out)
+
+=== BLOCKER ===
+Sandbox blocks UDP sockets: PermissionError [Errno 1] on UDP sendto to 127.0.0.1.
+DDS discovery/transport (FastDDS and CycloneDDS) requires UDP; inter-process ROS 2
+communication is impossible in this VM. Demo node itself runs fine under real rclpy.
