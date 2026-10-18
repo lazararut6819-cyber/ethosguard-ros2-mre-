@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/tmp/egros2/test_ros_transport.py", line 78, in <module>
+    main()
+  File "/tmp/egros2/test_ros_transport.py", line 46, in main
+    wait_for(lambda: pub.get_subscription_count() > 0 and bool(received))
+  File "/tmp/egros2/test_ros_transport.py", line 35, in wait_for
+    raise TimeoutError('ROS transport expectation timed out')
+TimeoutError: ROS transport expectation timed out
