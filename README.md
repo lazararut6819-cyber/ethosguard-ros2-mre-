@@ -120,4 +120,5 @@ Logs of these runs are in `logs/`.
 
 ## License
 
-TBD — no license selected yet.
+Licensed under the Apache License, Version 2.0 — see the [LICENSE](LICENSE) file.
+Copyright 2026 Fenwright Concepts LLC.
